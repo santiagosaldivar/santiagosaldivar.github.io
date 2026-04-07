@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-## Senior Thesis
+## Undergraduate Thesis
 
 **From Community to Commencement: Analyzing the Correlation Between Social Capital Variables and Graduation Rates Among U.S. High Schools** (advised by David M. Cutler, 2024)  
 [PDF](#)
