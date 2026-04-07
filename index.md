@@ -3,7 +3,7 @@ layout: home
 title: About Me
 ---
 
-![Headshot](assets/img/headshot.jpg)
+![Headshot](assets/img/"eit_headshot copy.JPG")
 
 # About Me
 
