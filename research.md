@@ -13,5 +13,3 @@ permalink: /research/
 
 **Latin America Digital Transformation Report 2023** (with Julio Vasconcellos, Ana Martins, Victor Ramos, and others, 2023)  
 [Report](https://www.atlantico.vc/latin-america-digital-transformation-report-2023)
-
-...
