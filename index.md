@@ -10,4 +10,4 @@ I graduated from Harvard College in 2024 with an A.B. in Applied Mathematics, fo
 I plan to pursue a Ph.D. in Economics in the near future.
 
 **Contact**  
-[ssaldivar@eit.org](mailto:ssaldivar@eit.org)
+ssaldivar [at] eit [dot] org
