@@ -7,7 +7,6 @@ permalink: /research/
 ## Undergraduate Thesis
 
 **From Community to Commencement: Analyzing the Correlation Between Social Capital Variables and Graduation Rates Among U.S. High Schools** (advised by David M. Cutler, 2024)  
-[PDF](#)
 
 How do the strength and interconnectedness of a community influence the education
 outcomes of students growing up within such a community? In this paper, I employ
