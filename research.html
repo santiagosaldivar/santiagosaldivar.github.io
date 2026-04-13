@@ -4,26 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research — Santiago A. Saldívar</title>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Serif:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --c0:  #021117;
       --c1:  #063041;
       --c2:  #0B4F6B;
       --c3:  #0F6F95;
       --c4:  #1183B0;
-      --c5:  #17ADE8;
-      --c6:  #41BCEC;
-      --c7:  #6ACAF0;
-      --c8:  #94D9F4;
       --c9:  #BEE8F9;
       --c10: #E8F7FD;
-      --gray-bg: #F2F4F6;
-      --gray-card: #ffffff;
-      --gray-border: #E0E6EA;
-      --text-primary: #0B1B24;
-      --text-secondary: #4A6070;
-      --text-muted: #8A9EAA;
+      --bg:             #ffffff;
+      --border:         #E8ECED;
+      --text-primary:   #0B1B24;
+      --text-secondary: #3D5260;
+      --text-muted:     #7A909C;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,10 +25,10 @@
 
     body {
       font-family: 'IBM Plex Serif', serif;
-      background: var(--gray-bg);
+      background: var(--bg);
       color: var(--text-primary);
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     /* ── Nav ── */
@@ -42,22 +36,22 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--gray-border);
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 2.5rem;
-      height: 58px;
+      padding: 0 3rem;
+      height: 60px;
     }
 
     .nav-name {
-      font-size: 18px;
-      font-weight: 600;
       font-family: 'IBM Plex Serif', serif;
-      color: var(--c2);
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--c1);
       letter-spacing: -0.01em;
       text-decoration: none;
     }
@@ -69,154 +63,111 @@
     }
 
     .nav-links a {
+      font-family: 'IBM Plex Serif', serif;
       font-size: 15px;
-      font-weight: 500;
-      color: var(--text-secondary);
+      font-weight: 400;
+      color: var(--text-muted);
       text-decoration: none;
-      letter-spacing: 0.01em;
       transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--c4); }
-    .nav-links a.active { color: var(--c4); }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--c2); }
 
     /* ── Page header ── */
     .page-header {
-      background: var(--gray-card);
-      border-bottom: 1px solid var(--gray-border);
-      padding: 2.75rem 2.5rem 2.25rem;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2.5rem;
       animation: fadeUp 0.5s ease both;
     }
 
-    .page-header-inner {
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
     .page-header h1 {
-      font-size: 26px;
-      font-weight: 600;
       font-family: 'IBM Plex Serif', serif;
+      font-size: 32px;
+      font-weight: 500;
       color: var(--c1);
       letter-spacing: -0.02em;
       margin-bottom: 6px;
     }
 
     .page-header p {
+      font-family: 'IBM Plex Sans', sans-serif;
       font-size: 14px;
       color: var(--text-muted);
     }
 
     /* ── Body ── */
     .page-body {
-      max-width: 780px;
+      max-width: 760px;
       margin: 0 auto;
-      padding: 2.5rem 1.5rem 4rem;
+      padding: 0 2rem 5rem;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 0 3rem;
     }
 
     /* ── Section ── */
-    .section { margin-bottom: 3rem; animation: fadeUp 0.5s ease both; }
-    .section:nth-child(2) { animation-delay: 0.08s; }
-    .section:nth-child(3) { animation-delay: 0.16s; }
+    .section {
+      margin-bottom: 3.5rem;
+      animation: fadeUp 0.5s ease both;
+    }
 
-    .section-label {
-      font-size: 10px;
-      font-weight: 600;
+    .section:nth-child(2) { animation-delay: 0.07s; }
+    .section:nth-child(3) { animation-delay: 0.14s; }
+    .section:nth-child(4) { animation-delay: 0.21s; }
+
+    .section-heading {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--c4);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
     }
 
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--gray-border);
+    /* ── Paper item ── */
+    .paper-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
     }
 
-    /* ── Paper card ── */
-    .paper-card {
-      background: var(--gray-card);
-      border: 1px solid var(--gray-border);
-      border-radius: 12px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .paper-card:hover {
-      border-color: var(--c8);
-      box-shadow: 0 2px 12px rgba(17,131,176,0.07);
-    }
-
-    .paper-accent {
-      width: 3px;
-      border-radius: 2px;
-      background: var(--c6);
-      flex-shrink: 0;
-      align-self: stretch;
-      min-height: 100%;
-    }
-
-    .paper-body { flex: 1; min-width: 0; }
+    .paper-item:first-child { border-top: 1px solid var(--border); }
 
     .paper-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--c1);
-      margin-bottom: 3px;
-      line-height: 1.45;
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-primary);
+      line-height: 1.5;
+      margin-bottom: 4px;
     }
 
     .paper-meta {
+      font-family: 'IBM Plex Sans', sans-serif;
       font-size: 12px;
       color: var(--text-muted);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+      line-height: 1.5;
     }
 
-    .paper-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 8px;
-    }
-
-    .tag {
-      display: inline-block;
+    .paper-status {
+      font-family: 'IBM Plex Sans', sans-serif;
       font-size: 11px;
-      font-weight: 500;
-      padding: 2px 9px;
-      border-radius: 4px;
+      color: var(--c3);
+      display: inline-block;
+      background: var(--c10);
+      padding: 1px 8px;
+      border-radius: 3px;
     }
 
-    .tag-wp   { background: var(--c10); color: var(--c3); }
-    .tag-rev  { background: #EEF9F0; color: #2D7A4A; }
-    .tag-link { background: var(--c10); color: var(--c3); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
-    .tag-link:hover { background: var(--c9); }
-    .tag-thesis { background: #F3F0FD; color: #5B44B0; }
-    .tag-other  { background: #FEF5E7; color: #8A5D00; }
-
-    /* ── Link button (PDF / SSRN placeholder) ── */
-    .paper-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--c4);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .paper-link:hover { color: var(--c2); }
-    .paper-link svg { width: 12px; height: 12px; flex-shrink: 0; }
+    .paper-status.review { background: #EDF7F1; color: #2D7A4A; }
+    .paper-status.thesis { background: #F3F0FD; color: #5B44B0; }
+    .paper-status.other  { background: #FEF5E7; color: #8A5D00; }
 
     /* ── Abstract toggle ── */
     .abstract-toggle {
@@ -225,23 +176,22 @@
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      font-family: 'IBM Plex Serif', serif;
+      gap: 4px;
+      font-family: 'IBM Plex Sans', sans-serif;
       font-size: 12px;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--c4);
       padding: 0;
-      margin-top: 4px;
+      margin-top: 8px;
       transition: color 0.2s;
     }
 
     .abstract-toggle:hover { color: var(--c2); }
 
     .abstract-toggle svg {
-      width: 12px;
-      height: 12px;
+      width: 11px;
+      height: 11px;
       transition: transform 0.25s ease;
-      flex-shrink: 0;
     }
 
     .abstract-toggle.open svg { transform: rotate(180deg); }
@@ -253,47 +203,61 @@
       opacity: 0;
     }
 
-    .abstract-body.open {
-      max-height: 800px;
-      opacity: 1;
-    }
+    .abstract-body.open { max-height: 900px; opacity: 1; }
 
     .abstract-text {
+      font-family: 'IBM Plex Sans', sans-serif;
       font-size: 13px;
       color: var(--text-secondary);
-      line-height: 1.75;
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid var(--gray-border);
+      line-height: 1.8;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
     }
+
+    /* ── External link ── */
+    .paper-link {
+      font-family: 'IBM Plex Sans', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: var(--c4);
+      text-decoration: none;
+      margin-top: 8px;
+      transition: color 0.2s;
+    }
+
+    .paper-link:hover { color: var(--c2); }
+    .paper-link svg { width: 11px; height: 11px; }
 
     /* ── Footer ── */
     footer {
       text-align: center;
       padding: 2rem;
+      font-family: 'IBM Plex Sans', sans-serif;
       font-size: 12px;
       color: var(--text-muted);
-      border-top: 1px solid var(--gray-border);
+      border-top: 1px solid var(--border);
     }
 
-    /* ── Animation ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
+      from { opacity: 0; transform: translateY(12px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      nav { padding: 0 1.25rem; }
-      .page-header { padding: 2rem 1.25rem 1.75rem; }
+    @media (max-width: 640px) {
+      nav { padding: 0 1.5rem; }
       .nav-links { gap: 1.5rem; }
+      .page-header { padding: 3rem 1.5rem 2rem; }
+      .page-body { padding: 0 1.5rem 4rem; }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="/" class="nav-name">Santiago Saldivar</a>
+    <a href="/" class="nav-name">Santiago A. Saldívar</a>
     <ul class="nav-links">
       <li><a href="/">About</a></li>
       <li><a href="/research.html" class="active">Research</a></li>
@@ -302,106 +266,69 @@
   </nav>
 
   <div class="page-header">
-    <div class="page-header-inner">
-      <h1>Research</h1>
-      <p>Works in progress, undergraduate work, and other publications.</p>
-    </div>
+    <h1>Research</h1>
+    <p>Works in progress, undergraduate work, and other publications.</p>
   </div>
 
   <main class="page-body">
 
-    <!-- Working Papers -->
+    <hr class="divider" />
+
     <section class="section">
-      <p class="section-label">Works in Progress</p>
+      <p class="section-heading">Works in Progress</p>
 
-      <div class="paper-card">
-        <div class="paper-accent"></div>
-        <div class="paper-body">
-          <p class="paper-title">Community Characteristics Associated With Hospital Openings and Closures in the United States, 2010-2023</p>
-          <p class="paper-meta">With Nancy D. Beaulieu, Kori S. Zachrison, David M. Cutler, Mary Beth Landrum, Ateev Mehrotra, Lee H. Schwamm, Rishi K. Wadhera</p>
-          <div class="paper-tags">
-            <span class="tag tag-wp">Manuscript in progress</span>
-          </div>
-          <!-- Replace href with actual PDF or SSRN link when ready -->
-          <!-- <a href="#" class="paper-link">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            PDF
-          </a> -->
-        </div>
+      <div class="paper-item">
+        <p class="paper-title">Community Characteristics Associated With Hospital Openings and Closures in the United States, 2010–2023</p>
+        <p class="paper-meta">With Nancy D. Beaulieu, Kori S. Zachrison, David M. Cutler, Mary Beth Landrum, Ateev Mehrotra, Lee H. Schwamm, Rishi K. Wadhera</p>
+        <span class="paper-status">Manuscript in progress</span>
+        <!-- Uncomment and add href when PDF/SSRN is ready:
+        <a href="#" class="paper-link">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          PDF
+        </a> -->
       </div>
-
-  <!---    <div class="paper-card">
-        <div class="paper-accent" style="background: var(--c8);"></div>
-        <div class="paper-body">
-          <p class="paper-title">Working Paper Title Two</p>
-          <p class="paper-meta">Author A · 2024</p>
-          <div class="paper-tags">
-            <span class="tag tag-rev">Under review</span>
-          </div>
-          <!-- Replace href with actual PDF or SSRN link when ready -->
-          <!-- <a href="#" class="paper-link">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-            PDF
-          </a> 
-        </div>
-      </div> -->
     </section>
 
-    <!-- Undergraduate Work -->
     <section class="section">
-      <p class="section-label">Undergraduate Work</p>
+      <p class="section-heading">Undergraduate Work</p>
 
-      <div class="paper-card">
-        <div class="paper-accent" style="background: #A090E0;"></div>
-        <div class="paper-body">
-          <p class="paper-title">From Community to Commencement: Analyzing the Correlation Between Social Capital Variables and Graduation Rates Among U.S. High Schools</p>
-          <p class="paper-meta">Advised by David M. Cutler · 2024</p>
-          <div class="paper-tags">
-            <span class="tag tag-thesis">Undergraduate thesis</span>
-          </div>
-          <button class="abstract-toggle" id="toggle-thesis" aria-expanded="false" aria-controls="abstract-thesis">
-            Read abstract
-            <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="abstract-body" id="abstract-thesis" role="region" aria-labelledby="toggle-thesis">
-            <p class="abstract-text">
-              How do the strength and interconnectedness of a community influence the education outcomes of students growing up within such a community? In this paper, I employ two novel measures of social capital — Economic Connectedness and Social Clustering, created and detailed in Chetty et al. (2022) — to study their relationship with graduation rates at the high school level. Economic Connectedness and Social Clustering measure the degree to which low and high socioeconomic individuals are friends with one another and the degree to which social networks are intertwined in a community, respectively. These variables are constructed using Facebook friendships from May, 2022 (Chetty et al. 2022). Controlling for well-known indicators of educational success, such as median parent income and student demographics, I run regressions between graduation rates and my two variables of interest. My results show that a one standard-deviation increase in economic connectedness is associated with a 2.46 percentage point increase in graduation rates when including controls and state fixed effects in the model. An analogous increase in social clustering is associated with a 1.13 percentage point increase in graduation rates when including the same controls and fixed effects. These increases are substantial as they represent a minimum of 7.5 percent of the gap between the national average graduation rate (87 percent) and a perfect 100 percent rate. These results support increasing socioeconomic diversity and community strength in school districts to improve education outcomes in the US.
-            </p>
-          </div>
+      <div class="paper-item">
+        <p class="paper-title">From Community to Commencement: Analyzing the Correlation Between Social Capital Variables and Graduation Rates Among U.S. High Schools</p>
+        <p class="paper-meta">Advised by David M. Cutler · 2024</p>
+        <span class="paper-status thesis">Undergraduate thesis</span><br>
+        <button class="abstract-toggle" id="toggle-thesis" aria-expanded="false" aria-controls="abstract-thesis">
+          Read abstract
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="abstract-body" id="abstract-thesis" role="region" aria-labelledby="toggle-thesis">
+          <p class="abstract-text">
+            How do the strength and interconnectedness of a community influence the education outcomes of students growing up within such a community? In this paper, I employ two novel measures of social capital — Economic Connectedness and Social Clustering, created and detailed in Chetty et al. (2022) — to study their relationship with graduation rates at the high school level. Economic Connectedness and Social Clustering measure the degree to which low and high socioeconomic individuals are friends with one another and the degree to which social networks are intertwined in a community, respectively. These variables are constructed using Facebook friendships from May, 2022 (Chetty et al. 2022). Controlling for well-known indicators of educational success, such as median parent income and student demographics, I run regressions between graduation rates and my two variables of interest. My results show that a one standard-deviation increase in economic connectedness is associated with a 2.46 percentage point increase in graduation rates when including controls and state fixed effects in the model. An analogous increase in social clustering is associated with a 1.13 percentage point increase in graduation rates when including the same controls and fixed effects. These increases are substantial as they represent a minimum of 7.5 percent of the gap between the national average graduation rate (87 percent) and a perfect 100 percent rate. These results support increasing socioeconomic diversity and community strength in school districts to improve education outcomes in the US.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Other Writing -->
     <section class="section">
-      <p class="section-label">Other Writing</p>
+      <p class="section-heading">Other Writing</p>
 
-      <div class="paper-card">
-        <div class="paper-accent" style="background: #F0B84A;"></div>
-        <div class="paper-body">
-          <p class="paper-title">Latin America Digital Transformation Report 2023</p>
-          <p class="paper-meta">With Julio Vasconcellos, Ana Martins, Victor Ramos, and others · 2023</p>
-          <div class="paper-tags">
-            <span class="tag tag-other">Industry report</span>
-          </div>
-          <a href="https://www.atlantico.vc/latin-america-digital-transformation-report-2023" target="_blank" rel="noopener" class="paper-link">
-            <svg viewBox="0 0 16 16" fill="none"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9M10 2h4m0 0v4m0-4L7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            View report
-          </a>
-        </div>
+      <div class="paper-item">
+        <p class="paper-title">Latin America Digital Transformation Report 2023</p>
+        <p class="paper-meta">With Julio Vasconcellos, Ana Martins, Victor Ramos, and others · 2023</p>
+        <span class="paper-status other">Industry report</span><br>
+        <a href="https://www.atlantico.vc/latin-america-digital-transformation-report-2023" target="_blank" rel="noopener" class="paper-link">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9M10 2h4m0 0v4m0-4L7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          View report
+        </a>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    &copy; 2025 Santiago Saldivar
-  </footer>
+  <footer>&copy; 2025 Santiago A. Saldívar</footer>
 
   <script>
     const toggle = document.getElementById('toggle-thesis');
     const abstract = document.getElementById('abstract-thesis');
-
     toggle.addEventListener('click', () => {
       const isOpen = abstract.classList.toggle('open');
       toggle.classList.toggle('open', isOpen);
