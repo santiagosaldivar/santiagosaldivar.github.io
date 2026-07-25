@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B4F6B"/>
+      <stop offset="100%" stop-color="#063041"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+
+  <!-- axes -->
+  <path d="M28 26 V76 H80" fill="none" stroke="#ffffff" stroke-opacity="0.35"
+        stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- demand curve (downward) -->
+  <path d="M32 30 L76 72" fill="none" stroke="#94D9F4"
+        stroke-width="6.5" stroke-linecap="round"/>
+
+  <!-- supply curve (upward) -->
+  <path d="M32 72 L76 30" fill="none" stroke="#ffffff"
+        stroke-width="6.5" stroke-linecap="round"/>
+
+  <!-- equilibrium point -->
+  <circle cx="54" cy="51" r="5.5" fill="#063041" stroke="#ffffff" stroke-width="3"/>
+</svg>
