@@ -33,14 +33,10 @@ nav { max-width: 1200px; margin: auto; padding: 24px 48px; display: flex; justif
 .hero { display: grid; grid-template-columns: 1.3fr 1fr; gap: 52px; align-items: center; padding: 76px 0 80px; }
 .eyebrow { font: 400 12px/1.6 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
 .hero-name { font: 400 clamp(58px, 6.4vw, 86px)/1.02 var(--serif); letter-spacing: -.065em; color: var(--blue); margin: 0 0 27px; }
-.hero-name em { font-weight: 400; }
 .hero-period { color: var(--blue); }
 .hero-title { font-weight: 500; font-size: 17px; line-height: 1.6; }
 .hero-title span { font-size: 15px; font-weight: 400; color: var(--muted); }
-.hero-interests { display: flex; flex-wrap: wrap; gap: 5px 16px; max-width: 490px; margin: 22px 0; }
-.interest { font-size: 13px; color: var(--blue); }
-.interest::before { content: ''; display: inline-block; width: 4px; height: 4px; background: var(--blue); border-radius: 50%; margin: 0 7px 3px 0; }
-.hero-contact { font: 400 13px/1.7 var(--mono); text-decoration: none; }
+.hero-contact { display: inline-block; margin-top: 22px; font: 400 13px/1.7 var(--mono); text-decoration: none; }
 .hero-contact span { display: inline-block; margin-left: 6px; transition: transform .2s; }
 .hero-contact:hover span { transform: translate(2px,-2px); }
 .hero-visual { position: relative; min-height: 430px; display: flex; justify-content: center; align-items: center; }
