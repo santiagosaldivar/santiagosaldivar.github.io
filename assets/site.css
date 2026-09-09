@@ -40,7 +40,8 @@ nav { max-width: 1200px; margin: auto; padding: 24px 48px; display: flex; justif
 .hero-contact span { display: inline-block; margin-left: 6px; transition: transform .2s; }
 .hero-contact:hover span { transform: translate(2px,-2px); }
 .hero-visual { position: relative; min-height: 430px; display: flex; justify-content: center; align-items: center; }
-.hero-photo-wrap { position: relative; width: 70%; max-width: 296px; aspect-ratio: 148/188; border: 2px solid var(--blue); padding: 5px; }
+.hero-photo-wrap { position: relative; isolation: isolate; width: 70%; max-width: 296px; aspect-ratio: 148/188; padding: 7px; }
+.hero-photo-wrap::before { content: ''; position: absolute; inset: 7px; transform: translate(12px, 12px); border: 2px solid var(--blue); opacity: .22; z-index: -1; pointer-events: none; }
 .hero-photo-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .page-body { padding-bottom: 80px; counter-reset: section; }
 .section { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 44px; padding: 38px 0 48px; border-top: 1px solid var(--line); }
